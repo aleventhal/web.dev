@@ -169,8 +169,8 @@ module.exports = function (config) {
   });
   config.addCollection('algolia', (collection) => {
     if (isProd) {
-      const algoliaPosts = require(`./${collectionsDir}/algolia-posts`);
-      return algoliaPosts(collection);
+      const algolia = require(`./${collectionsDir}/algolia`);
+      return algolia(collection);
     }
     return [];
   });
