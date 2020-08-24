@@ -99,8 +99,6 @@ function ensureServiceWorker() {
     navigator.serviceWorker.addEventListener(
       'controllerchange',
       (event) => {
-        console.warn('FIRST CONTROLLERCHANGE');
-
         // We don't fetch the partial for the initial, real, HTML fetch from our HTTP server. This
         // ensures that if the user goes offline and reloads for some reason, the page still loads.
         getHTML(pathname);
@@ -117,11 +115,11 @@ function ensureServiceWorker() {
     getHTML('/');
   }
 
-  // We claim active clients if the Service Worker's architecture rev changes. We can't
-  // reliably force a reload via the Client interface as it's unsupported in Safari.
+  // We claim active clients if the Service Worker's architecture rev changes. This isn't on any
+  // minor Service Worker change (i.e., new JS or CSS), only when the major version changes.
+  // (We can't reliably force a reload via the Client interface of the SW itself, as the method is
+  // unsupported in Safari.)
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    console.warn('LATER CONTROLLERCHANGE');
-
     window.location.reload();
   });
   navigator.serviceWorker.register('/sw.js', {updateViaCache: 'all'});
