@@ -219,16 +219,6 @@ they're considered shippable. There's too much nuance. Ideally everything would 
 several different browser-screen reader combinations, because of the numerous implementation
 quirks, in addition to a few incomplete implementations.
 
-### File bug on Chrome or on web content?
-
-For our team, which works on Chrome, we need to know when our representation of truth doesn't match
-what's provided by other browsers. When NVDA reads something different in the same web content in
-Firefox vs. Chrome, it's often our bug, since Firefox has an older, more seasoned accessibility
-mapping layer.
-
-If all the browser-screen reader combinations seem to agree, and the web content still behaves
-badly, we will need to file a bug on the web content itself, not on the browser.
-
 ## Summary
 
 In summary, ARIA magic can be used to override or add to anything and everything that the HTML says.
