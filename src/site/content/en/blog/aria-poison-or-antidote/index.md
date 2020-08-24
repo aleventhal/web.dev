@@ -46,7 +46,7 @@ in HTML, sometimes tweaked with bits of JavaScript.
 
 ## How does ARIA work?
 
-Browsers gets asked by a screen reader or other assistive technology for information about each
+Browsers are asked by a screen reader or other assistive technology for information about each
 element. When ARIA is present on an element, the browser takes in the information and changes
 what it tells the screen reader about that element.
 
