@@ -4,7 +4,7 @@ title: |
 subhead: |
   How lying to screen readers cures accessibility, when it doesn't rub salt in it!
 authors:
-  - aaronlevanthal
+  - aaronleventhal
 date: 2020-08-18
 description: |
   How lying to screen readers cures accessibility, when it doesn't rub salt in it!
